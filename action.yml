@@ -1,0 +1,36 @@
+name: aws-codeartifact-delete-package-versions
+description: Deletes one or more versions of a package. A deleted package version cannot be restored in your repository. If you want to remove a package version from your repository and be able to restore it later, set its status to Archived
+branding:
+  icon: code
+  color: blue
+author: Fred78290
+
+inputs:
+  domain:
+    description: "The name of the domain that contains the package to delete"
+    required: true
+  domain-owner:
+    description: "The 12-digit account number of the AWS account that owns the domain. It does not include dashes or spaces"
+    required: true
+  region:
+    description: "AWS CodeArtifact Region"
+    required: true
+  repository:
+    description: "The name of the repository that contains the package versions to delete"
+    required: true
+  format:
+    description: "The format of the package versions to delete. The valid values are: npm,pypi,maven,nuget"
+    required: true
+  namespace:
+    description: "The namespace of the package. The package component that specifies its namespace depends on its type"
+    required: true
+  package:
+    description: "The name of the package with the versions to delete"
+    required: true
+  versions:
+    description: "An array of strings that specify the versions of the package to delete"
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+      

@@ -1,0 +1,32 @@
+{
+  "name": "aws-codeartifact-delete-package-versions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "package": "ncc build index.js --license licenses.txt"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/exec": "^1.0.4",
+    "@actions/io": "^1.1.0",
+    "@aws-sdk/client-codeartifact": "^3.14.0",
+    "aws-sdk": "^2.902.0",
+    "fs": "^0.0.1-security",
+    "node": "^16.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fred78290/aws-codeartifact-delete-package-versions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Fred78290/aws-codeartifact-delete-package-versions/issues"
+  },
+  "homepage": "https://github.com/Fred78290/aws-codeartifact-delete-package-versions#readme"
+}
