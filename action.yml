@@ -1,5 +1,5 @@
 name: aws-codeartifact-delete-package-versions
-description: Deletes one or more versions of a package. A deleted package version cannot be restored in your repository. If you want to remove a package version from your repository and be able to restore it later, set its status to Archived
+description: Deletes package from aws codeartifact
 branding:
   icon: code
   color: blue
