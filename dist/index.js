@@ -28,14 +28,18 @@ async function run() {
     namespace: namespace
   });
 
-  const response = await client.send(authCommand);
+  try {
+    const response = await client.send(authCommand);
 
-  if (response.failedVersions != undefined) {
-     core.setOutput('failedVersions', response.failedVersions);
-  }
-
-  if (response.successfulVersions != undefined) {
-   core.setOutput('successfulVersions', response.successfulVersions);
+    if (response.failedVersions != undefined) {
+       core.setOutput('failedVersions', response.failedVersions);
+    }
+  
+    if (response.successfulVersions != undefined) {
+     core.setOutput('successfulVersions', response.successfulVersions);
+    }  
+  } catch (error) {
+    core.error(error);
   }
 }
 
