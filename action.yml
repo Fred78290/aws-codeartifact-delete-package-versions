@@ -31,6 +31,6 @@ inputs:
     description: "An array of strings that specify the versions of the package to delete"
     required: true
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
       
